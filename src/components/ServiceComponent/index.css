@@ -1,0 +1,36 @@
+.uk-container-small {
+    max-width: 900px;
+}
+@media (min-width: 960px){
+    .uk-container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.uk-container {
+    box-sizing: content-box;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.first-col{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.location-row{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.uk-section {
+    padding: 5% 10%;
+}

@@ -23,7 +23,7 @@ const BookingPage = (props) => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [messageType, setMessageType] = useState('');
-  const [hospitalName, setHospitalName] = useState('');
+  const [hospitalName] = useState('');
 
   const { hospitalId, doctorId } = match.params;
 
@@ -77,28 +77,28 @@ const BookingPage = (props) => {
     const enteredDateArray = dateOfAppointment.split('-');
     console.log(enteredDateArray, currentYear, currentMonth, currentDate, "entered date array");
     if (patientName === null || patientName === '') {
-      setMessage('Entered name is invalid');
+      setMessage('Tên sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     } else if (age === 0 || age === '' || age.length > 3 || age === null || isNaN(age)) {
-      setMessage('Entered age is invalid');
+      setMessage('Tuổi sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     } else if (address === null || address === '') {
-      setMessage('Entered address is invalid');
+      setMessage('Địa chỉ sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     } else if (!isAfter(new Date(dateOfAppointment), new Date()) && !isSameDay(new Date(dateOfAppointment), new Date())) {
-      setMessage('Invalid date selected');
+      setMessage('Ngày sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     }
     else if (String(contactNumber).length !== 10 || isNaN(contactNumber) || contactNumber === '') {
-      setMessage('Entered contact number is invalid');
+      setMessage('Số điện thoại sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     } else if (reg.test(email) === false || email === '') {
-      setMessage('Entered email is invalid');
+      setMessage('Email sai định dạng');
       setMessageType('alert-danger');
       invalidCount += 1;
     }

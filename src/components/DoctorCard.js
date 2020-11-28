@@ -28,7 +28,7 @@ const DoctorCard = (props) => {
             <p className="card-text">{description}</p>
             <p className="card-text">
               
-Ngày có sẵn:
+            Ngày có sẵn:
               {' '}
               {daysAvailable}
               <br />

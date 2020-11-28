@@ -45,17 +45,22 @@ const LocationComponent = (props) => {
   //   })
   //   .catch((err) => console.log("failed to fetch"));
   // }, [hospitalId, history, location]);
-  const chunkedArr = Array.from({ length: Math.ceil(services.length / 3) }, (v, i) =>
-  services.slice(i * 3, i * 3 + 3)
-)
+  const chunkedArr = Array.from(
+    { length: Math.ceil(services.length / 3) },
+    (v, i) => services.slice(i * 3, i * 3 + 3)
+  );
   return (
     <div className="uk-section-default uk-section uk-section-xsmall content-section">
       <div className="uk-container uk-container-small">
         <div className="first-col">
           <h2>Địa điểm ?</h2>
-          {chunkedArr.map(arr => <div className="location-row">
-            {arr.map(x => <RadioButtonComponent name={x} path="/hospital-page/123"/>)}
-          </div>)}
+          {chunkedArr.map((arr) => (
+            <div className="location-row">
+              {arr.map((x) => (
+                <RadioButtonComponent name={x} path="/hospital-page/123" />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

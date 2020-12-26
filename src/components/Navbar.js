@@ -5,7 +5,7 @@ import './Navbar.css';
 const Navbar = () => (
   <div className="navbar">
     <div className="brandname">
-      <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Đặt Lịch Khám</Link>
+      <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>Trang chủ</Link>
     </div>
     <div className="function">
       <Link to="/search" style={{ textDecoration: 'none', color: 'white'}}>Tìm kiếm</Link>

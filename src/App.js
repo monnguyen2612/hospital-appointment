@@ -6,6 +6,7 @@ import HospitalPage from './routes/HospitalPage';
 import BookingPage from './routes/BookingPage';
 import LocationPage from './routes/LocationPage';
 import ServicePage from './routes/ServicePage';
+import HomePage from './routes/HomePage';
 import LoginPage from './routes/LoginPage';
 import RegisterPage from './routes/RegisterPage';
 import Navbar from './components/Navbar';
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/hospital-page/:hospitalId/:doctorId" exact component={BookingPage} />
       <Route path="/location" exact component={LocationPage} />
       <Route path="/" exact component={ServicePage} />
+      <Route path="/home" exact component={HomePage} />
     </ScrollToTop>
   </BrowserRouter>
 );

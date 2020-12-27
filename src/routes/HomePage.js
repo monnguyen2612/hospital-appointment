@@ -15,11 +15,11 @@ const HomePage = (props) => {
         <div class="vung-bao">
           <div class="hang">
             <div class="cot-nho-7 cot-9">
-              <button class="trinhdon-congtac">
+              {/* <button class="trinhdon-congtac">
                 <span class="duong-ke"></span>
                 <span class="duong-ke"></span>
                 <span class="duong-ke"></span>
-              </button>
+              </button> */}
               <a href="/" />
               <img
                 class="bt-dautrang"
@@ -108,7 +108,7 @@ const HomePage = (props) => {
                 </button>
               </div>
               <div class="timkiem-onhap">
-                <i class="bt-g bt-g-tim"></i>
+                {/* <i class="bt-g bt-g-tim"></i> */}
                 <input
                   id="timkiem_chung"
                   type="search"
